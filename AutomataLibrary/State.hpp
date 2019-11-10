@@ -1,6 +1,7 @@
 /** @author yaishenka
     @date 2019-11-10 */
 #pragma once
+#include <cstddef>
 #include <vector>
 #include <exception>
 
@@ -47,7 +48,7 @@ class State {
    */
   const State operator^(size_t power);
 
-  static constexpr size_t impossible_length_ = static_cast<size_t>(10e9);
+  const size_t impossible_length_ = static_cast<size_t>(10e9);
  private:
   char letter_to_collect_;
   int letters_count_;

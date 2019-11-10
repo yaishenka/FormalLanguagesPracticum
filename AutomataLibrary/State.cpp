@@ -1,4 +1,5 @@
 #include "State.hpp"
+#include <stdexcept> 
 using namespace automate;
 
 State::State(char symbol, char letter_to_collect, int letters_count)

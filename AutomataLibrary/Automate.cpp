@@ -3,7 +3,7 @@
 
 using namespace automate;
 
-std::optional<size_t> Automate::GetShortestWord(const std::string& regexp, char letter_to_find, int max_letters) {
+std::experimental::optional<size_t> Automate::GetShortestWord(const std::string& regexp, char letter_to_find, int max_letters) {
   auto final_state = ProcessRegexp(regexp, letter_to_find, max_letters);
 
   return final_state[max_letters];

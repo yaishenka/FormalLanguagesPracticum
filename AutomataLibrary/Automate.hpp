@@ -4,7 +4,7 @@
 #include "State.hpp"
 #include <vector>
 #include <string>
-#include <optional>
+#include <experimental/optional>
 
 namespace automate {
 
@@ -16,7 +16,7 @@ class IncorrectRegexp: public std::exception {
 
 class Automate {
  public:
-  static std::optional<size_t> GetShortestWord(const std::string& regexp, char letter, int max_letters);
+  static std::experimental::optional<size_t> GetShortestWord(const std::string& regexp, char letter, int max_letters);
 
  private:
   static State ProcessRegexp(const std::string& regexp, char letter, int max_letters);

@@ -1,0 +1,20 @@
+language: cpp
+
+install:
+  - sudo pip install codecov
+  - sudo apt-get install -y cmake
+  - sudo apt-get install -y libgtest-dev
+  - mkdir build_gtest
+  - cd build_gtest
+  - cmake /usr/src/gtest
+  - sudo make
+  - sudo cp libgtest* /usr/lib
+  - cd ..
+
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make 
+  - ./Test
