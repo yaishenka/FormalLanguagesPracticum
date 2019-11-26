@@ -3,7 +3,7 @@
 using namespace automate;
 
 State::State(char symbol, char letter_to_collect, int letters_count)
-    : min_string_length_(letters_count + 1, impossible_length_),
+    : min_string_length_(letters_count + 1, impossible__regexp_length),
       letter_to_collect_(letter_to_collect),
       letters_count_(letters_count) {
   if (letter_to_collect == symbol && letters_count > 0) {
@@ -54,7 +54,7 @@ const State State::operator*(const State& other_automate) {
 
   auto result = *this;
   for (int i = 0; i <= letters_count_; ++i) {
-    result[i] = impossible_length_;
+    result[i] = impossible__regexp_length;
   }
   for (size_t i = 0; i <= letters_count_; ++i) {
     for (size_t j = 0; j <= i; ++j) {

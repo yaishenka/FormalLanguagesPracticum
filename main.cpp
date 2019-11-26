@@ -20,7 +20,7 @@ class Solver {
     try {
       size_t answer = automate.GetShortestWord(regexp, letter_to_collect, max_letters).value_or(0);
 
-      if (answer == State::impossible_length_) {
+      if (answer == automate::impossible__regexp_length) {
         std::cout << "INF";
       } else {
         std::cout << answer;
