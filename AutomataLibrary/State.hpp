@@ -7,6 +7,8 @@
 
 namespace automate {
 
+const size_t impossible__regexp_length = static_cast<size_t>(10e9);
+
 class NotCompatibleRegexps: public std::exception {
   const char* what() const noexcept override {
     return "Not compatible regexps";
@@ -47,8 +49,6 @@ class State {
    * r^k = (r + rr + rrr + ... + r^k)
    */
   const State operator^(size_t power);
-
-  const size_t impossible_length_ = static_cast<size_t>(10e9);
  private:
   char letter_to_collect_;
   int letters_count_;

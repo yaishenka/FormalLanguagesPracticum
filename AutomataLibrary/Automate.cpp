@@ -47,7 +47,7 @@ State Automate::ProcessRegexp(const std::string& regexp,
         break;
       }
       case '*': {
-        if (states.size() < 1) {
+        if (states.empty()) {
           throw IncorrectRegexp();
         }
 
