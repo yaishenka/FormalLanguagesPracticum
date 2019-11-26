@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/yaishenka/FormalLanguagesPracticum.svg?branch=master)](https://travis-ci.com/yaishenka/FormalLanguagesPracticum)
+[![Build Status](https://travis-ci.com/yaishenka/FormalLanguagesPracticum.svg?branch=master)](https://travis-ci.com/yaishenka/FormalLanguagesPracticum) [![codecov](https://codecov.io/gh/yaishenka/FormalLanguagesPracticum/branch/master/graph/badge.svg)](https://codecov.io/gh/yaishenka/FormalLanguagesPracticum)
 # FormalLanguagesPracticum
 
 Краткое описание алгоритма: состояние - массив, размера k.
