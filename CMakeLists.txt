@@ -21,4 +21,6 @@ target_link_libraries(FormalLanguagesPracticum ${EXTRA_LIBS})
 target_link_libraries(Test ${EXTRA_LIBS})
 target_link_libraries(Test Threads::Threads ${GTEST_LIBRARIES} ${GMOCK_BOTH_LIBRARIES})
 
-target_link_libraries(Test -fprofile-arcs -fprofile-generate -ftest-coverage)
+
+add_definitions(-fprofile-generate -ftest-coverage)
+target_link_libraries(Test -fprofile-arcs)
