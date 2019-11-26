@@ -25,7 +25,7 @@ addons:
 
 after_success:
   # Create lcov report
-  - lcov --capture --directory ./build/CMakeFiles/Test.dir/ --output-file coverage.info
+  - lcov --capture --directory /home/travis/build/yaishenka/FormalLanguagesPracticum/build/Test.dir/ --output-file coverage.info
   - lcov --remove coverage.info '/usr/*' --output-file coverage.info # filter system-files
   - lcov --list coverage.info # debug info
   # Uploading report to CodeCov
